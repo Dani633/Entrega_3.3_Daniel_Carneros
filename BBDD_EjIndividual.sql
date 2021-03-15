@@ -1,0 +1,46 @@
+DROP DATABASE IF EXISTS EjIndividual;
+CREATE DATABASE EjIndividual;
+
+USE EjIndividual;
+
+CREATE TABLE JUGADORES (
+usuario VARCHAR(60),
+contraseña VARCHAR(60),
+jugando_partida INT,
+puntuación_actual INT
+)ENGINE=InnoDB;
+
+INSERT INTO JUGADORES VALUES ('theDn2000','zanahoria', 0, 0);
+INSERT INTO JUGADORES VALUES ('roberto333','zebra', 3, 12);
+INSERT INTO JUGADORES VALUES ('Xx_Juan_xX','ballena', 3, 10);
+INSERT INTO JUGADORES VALUES ('Pepe_gamer','tigre', 2, 42);
+
+
+CREATE TABLE PARTIDA (
+id INT,
+estado VARCHAR(60),
+fecha_y_hora VARCHAR(60),
+duración FLOAT,
+ganador VARCHAR(60)
+)ENGINE=InnoDB;
+
+INSERT INTO PARTIDA VALUES (1,'finalizada', '20210315193125', 457.674,'theDn2000');
+INSERT INTO PARTIDA VALUES (2,'jugándose', 0, 246.482,'nadie');
+INSERT INTO PARTIDA VALUES (3,'jugándose', 0, 25.176,'nadie');
+
+
+
+CREATE TABLE RANKING (
+usuario VARCHAR(60),
+puntuación_máxima INT
+)ENGINE=InnoDB;
+
+INSERT INTO RANKING VALUES ('theDn2000', 65);
+INSERT INTO RANKING VALUES ('roberto333', 54);
+INSERT INTO RANKING VALUES ('Xx_Juan_xX', 11);
+INSERT INTO RANKING VALUES ('Pepe_gamer', 42);
+
+
+
+
+
